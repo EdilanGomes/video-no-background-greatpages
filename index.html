@@ -1,0 +1,38 @@
+<script>
+  // Adiciona o vídeo e a sobreposição ao bloco específico
+  $("#b_1079302_1_6747a11aa79ec").append(`
+    <video autoplay muted loop playsinline id="vid" preload="auto" width="100%" height="100%" volume="0" canplay="false">
+      <source src="https://user-images.githubusercontent.com/99222756/252147131-7c1a619f-4ad3-499a-b5dc-1cec756a004b.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+  `);
+</script>
+
+<style>
+  /* Estilização do vídeo no bloco */
+  #b_1079302_1_6747a11aa79ec video {
+    filter: grayscale(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    mix-blend-mode: exclusion;
+  }
+
+  /* Sobreposição para efeito adicional */
+  #b_1079302_1_6747a11aa79ec .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.1) -90%, rgb(255, 255, 255) 60%);
+    background-size: 3px 3px;
+    z-index: 1;
+    pointer-events: none;
+  }
+</style>
